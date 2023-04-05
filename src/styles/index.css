@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@layer components {
+  body {
+    @apply bg-slate-50 dark:bg-slate-900;
+  }
+
+  * {
+    @apply text-slate-900 dark:text-slate-50 transition-all duration-300 ease-in-out;
+  }
+
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  /* quasar */
+  .q-header {
+    @apply bg-slate-50/0 backdrop-blur;
+  }
+
+  .q-drawer {
+    @apply bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur;
+  }
+
+  .q-drawer__backdrop {
+    @apply bg-slate-900/80 backdrop-blur !important;
+  }
+
+  .q-scrollarea__thumb {
+    @apply rounded-full w-2 bg-slate-800/80 dark:bg-slate-100/80  backdrop-blur !important;
+  }
+
+  .q-menu, .q-list, .q-item, .q-card {
+    @apply bg-slate-100 dark:bg-slate-800;
+  }
+}

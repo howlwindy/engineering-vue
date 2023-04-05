@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "ZixuanChen.vitest-explorer",
+    "EditorConfig.EditorConfig", // 编辑器格式化
+    "dbaeumer.vscode-eslint", // eslint
+    "stylelint.vscode-stylelint", // stylelint
+    "esbenp.prettier-vscode", // prettier
+    "bradlc.vscode-tailwindcss", // tailwind提示
+    "IWANABETHATGUY.path-alias", // 处理路径别名，比如@是src的别名
+    "humao.rest-client", // 代替postman
+    "ZixuanChen.vitest-explorer", // vitest
+    "lokalise.i18n-ally", // i18n
+    "Vue.vscode-typescript-vue-plugin"
+  ]
+}
