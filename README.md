@@ -111,8 +111,8 @@ pnpm create vite
     - [faker.util.ts](src/utils/faker.util.ts) - faker工具
     - [index.ts](src/utils//index.ts) - 所有工具导出
     - [storage.util.ts](src/utils/storage.util.ts) - localeStorage/sessionStorage工具
-  - App.vue - 根组件
-  - main.ts - 入口文件
+  - [App.vue](src/App.vue) - 根组件
+  - [main.ts](src/main.ts) - 入口文件
 - **typing** - 所有.d.ts
   - [vue-shim.d.ts](typing/vue-shim.d.ts) - ts对.vue的识别
 - [.commitlintrc.cjs](.commitlintrc.cjs) - git 规范配置
