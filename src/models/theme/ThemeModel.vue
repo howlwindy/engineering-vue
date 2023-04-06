@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { C_LOCALE, C_THEME } from '@/consts'
-import { E_THEME, E_THEME_ICON } from '@/enums'
-import { uLocaleLocalStorage, uThemeLocalStorage } from '@/utils'
+import { C_THEME } from '@/consts'
+import { E_THEME } from '@/types'
+import { uThemeLocalStorage } from '@/utils'
 import { Icon } from '@iconify/vue'
 import { usePreferredDark } from '@vueuse/core'
 import { QBtn, QItem, QItemSection, QList, QMenu } from 'quasar'
@@ -21,7 +21,8 @@ onMounted(() => {
       if (v[0] === E_THEME.SYSTEM) {
         document.documentElement.className = v[1] ? E_THEME.DARK : ''
       } else {
-        document.documentElement.className = v[0] === E_THEME.DARK ? 'dark' : ''
+        document.documentElement.className =
+          v[0] === E_THEME.DARK ? E_THEME.DARK : ''
       }
     },
     { immediate: true }

@@ -3,8 +3,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{css,vue,ts,tsx}'],
   darkMode: 'class',
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

@@ -1,5 +1,5 @@
 import { C_LOCALE } from '@/consts'
-import { E_LOCALE, E_LOCAL_STORAGE, E_SESSION_STORAGE, E_THEME } from '@/enums'
+import { E_LOCALE, E_LOCAL_STORAGE, E_SESSION_STORAGE, E_THEME } from '@/types'
 import { RemovableRef, useStorage } from '@vueuse/core'
 import { watch } from 'vue'
 

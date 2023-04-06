@@ -1,5 +1,5 @@
 import { C_LOCALE } from '@/consts'
-import { E_LOCALE } from '@/enums'
+import { E_LOCALE } from '@/types'
 import { uLocaleLocalStorage } from '@/utils'
 import { createI18n } from 'vue-i18n'
 

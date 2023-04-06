@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { I18nModel, ThemeModel } from '@/models'
+import { FakerModel, I18nModel, ThemeModel } from '@/models'
 import { Icon } from '@iconify/vue'
 import {
   QBtn,
@@ -10,6 +10,10 @@ import {
   QScrollArea,
 } from 'quasar'
 import { ref } from 'vue'
+
+import { useGlobalStore } from '@/store/global.store'
+
+const globalStore = useGlobalStore()
 
 const left = ref<boolean>(true)
 const h = ref<number>(0)
@@ -39,6 +43,7 @@ const h = ref<number>(0)
             </div>
           </div>
           <div class="flex items-center">
+            <FakerModel />
             <I18nModel />
             <ThemeModel />
           </div>
@@ -46,7 +51,7 @@ const h = ref<number>(0)
       </QHeader>
       <QDrawer v-model="left" show-if-above side="left" elevated>
         <QScrollArea class="h-full w-full">
-          <p v-for="v of 100" :key="v">{{ $t('test.sidenav') }} - {{ v }}</p>
+          <p v-for="v of globalStore.faker.sidenav" :key="v">{{ v }}</p>
         </QScrollArea>
       </QDrawer>
       <QPageContainer>
@@ -56,7 +61,7 @@ const h = ref<number>(0)
           :style="{ height: `${h}px` }"
         >
           <QScrollArea class="h-full w-full">
-            <p v-for="v of 100" :key="v">{{ $t('test.content') }} - {{ v }}</p>
+            <p v-for="v of globalStore.faker.content" :key="v">{{ v }}</p>
             <RouterView />
           </QScrollArea>
         </QPage>

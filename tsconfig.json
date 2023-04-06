@@ -1,9 +1,9 @@
 {
   "include": [
+    "**/*.js",
+    "**/*.cjs",
     "**/*.ts",
     "**/*.vue",
-    "*.config.*",
-    "**/*.d.ts"
   ],
   "exclude": ["node_modules", "public", "dist", "public/reports"],
   "compilerOptions": {

@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { C_LOCALE } from '@/consts'
-import { E_LOCALE } from '@/enums'
-import { uLocaleLocalStorage } from '@/utils'
+import { E_LOCALE } from '@/types'
+import { uFaker, uLocaleLocalStorage } from '@/utils'
+import { faker } from '@faker-js/faker'
 import { Icon } from '@iconify/vue'
 import { QBtn, QItem, QItemSection, QList, QMenu } from 'quasar'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import { useGlobalStore } from '@/store/global.store'
+
+const globalStore = useGlobalStore()
 const { locale } = useI18n()
 
 const data = ref<E_LOCALE>(uLocaleLocalStorage.value as E_LOCALE)
@@ -14,6 +18,10 @@ const change = (val: E_LOCALE) => {
   data.value = val
   uLocaleLocalStorage.value = val
   locale.value = val
+  faker.setLocale(C_LOCALE[val].faker)
+  globalStore.$patch({
+    faker: uFaker(),
+  })
 }
 </script>
 <template>

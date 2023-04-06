@@ -1,2 +1,1 @@
-export * from './locale.const'
-export * from './theme.const'
+export * from './global.const'
