@@ -98,111 +98,86 @@ pnpm create vite
 > 所有的库只说明其地址和简要，具体请查看相关 api
 
 - 工程化
-  - **`typescript`** - 统一项目`ts`版本
-    - [![](https://img.shields.io/npm/v/typescript?logo=npm&style=plastic&label=typescript)](https://www.npmjs.com/package/typescript)
-    - [![](https://img.shields.io/github/stars/microsoft/TypeScript?logo=github&style=plastic&label=typescript)](https://github.com/microsoft/TypeScript)
-    - [![](https://img.shields.io/static/v1?logo=typescript&style=plastic&label=typescript&message=official-site)](https://www.typescriptlang.org)
-  - **`rimraf`** - 在打包前删除已经存在的`dist`目录
-    - [![](https://img.shields.io/npm/v/rimraf?logo=npm&style=plastic&label=rimraf)](https://www.npmjs.com/package/rimraf)
-    - [![](https://img.shields.io/github/stars/isaacs/rimraf?logo=github&style=plastic&label=rimraf)](https://github.com/isaacs/rimraf)
+  - **`vite`** [![](https://img.shields.io/npm/v/vite?logo=npm)](https://www.npmjs.com/package/vite) [![](https://img.shields.io/github/stars/vitejs/vite?logo=github)](https://github.com/vitejs/vite) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitejs.dev)
+  - **`typescript`** [![](https://img.shields.io/npm/v/typescript?logo=npm)](https://www.npmjs.com/package/typescript) [![](https://img.shields.io/github/stars/microsoft/TypeScript?logo=github)](https://github.com/microsoft/TypeScript) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.typescriptlang.org)
+    >  统一项目`ts`版本
+  - **`rimraf`** [![](https://img.shields.io/npm/v/rimraf?logo=npm)](https://www.npmjs.com/package/rimraf) [![](https://img.shields.io/github/stars/isaacs/rimraf?logo=github)](https://github.com/isaacs/rimraf)
+    > 在打包前删除已经存在的`dist`目录
   - git hooks 拦截 - 用于执行某些 git 命令时先进行代码检查或其他操作
-    - **`husky`**
-      - [![](https://img.shields.io/npm/v/husky?logo=husky&style=plastic&label=husky)](https://www.npmjs.com/package/husky)
-      - [![](https://img.shields.io/github/stars/microsoft/TypeScript?logo=github&style=plastic&label=typescript)](https://github.com/microsoft/TypeScript)
-      - [![](https://img.shields.io/static/v1?logo=typescript&style=plastic&label=typescript&message=official-site)](https://typicode.github.io/husky)
-    - **`lint-staged`**
-      - [![](https://img.shields.io/npm/v/lint-staged?logo=lint-staged&style=plastic&label=lint-staged)](https://www.npmjs.com/package/lint-staged)
-
-#### `git commit` 规范
-
-> `git commit`改为`git cz`并将提交信息规范化
-
-[![](https://img.shields.io/npm/v/lint-staged?logo=lint-staged&style=plastic&label=lint-staged)](https://www.npmjs.com/package/lint-staged)
-[![](https://img.shields.io/npm/v/@commitlint/cli?logo=@commitlint/cli&style=plastic&label=@commitlint/cli)](https://www.npmjs.com/package/@commitlint/cli)
-[![](https://img.shields.io/npm/v/@commitlint/config-conventional?logo=@commitlint/config-conventional&style=plastic&label=@commitlint/config-conventional)](https://www.npmjs.com/package/@commitlint/config-conventional)
-[![](https://img.shields.io/npm/v/@commitlint/cz-commitlint?logo=@commitlint/cz-commitlint&style=plastic&label=@commitlint/cz-commitlint)](https://www.npmjs.com/package/@commitlint/cz-commitlint)
-[![](https://img.shields.io/npm/v/commitizen?logo=commitizen&style=plastic&label=commitizen)](https://www.npmjs.com/package/commitizen)
-[![](https://img.shields.io/npm/v/cz-conventional-changelog?logo=cz-conventional-changelog&style=plastic&label=cz-conventional-changelog)](https://www.npmjs.com/package/cz-conventional-changelog)
-
-#### eslint
-
-> 对`.js`,`.ts`,`.jsx`,`.tsx`,`.vue` 进行代码检查
-
-[![](https://img.shields.io/npm/v/eslint?logo=eslint&style=plastic&label=eslint)](https://www.npmjs.com/package/eslint)
-[![](https://img.shields.io/npm/v/@rushstack/eslint-patch?logo=@rushstack/eslint-patch&style=plastic&label=@rushstack/eslint-patch)](https://www.npmjs.com/package/@rushstack/eslint-patch)
-[![](https://img.shields.io/npm/v/@vue/eslint-config-prettier?logo=@vue/eslint-config-prettier&style=plastic&label=@vue/eslint-config-prettier)](https://www.npmjs.com/package/@vue/eslint-config-prettier)
-[![](https://img.shields.io/npm/v/@vue/eslint-config-typescript?logo=@vue/eslint-config-typescript&style=plastic&label=@vue/eslint-config-typescript)](https://www.npmjs.com/package/@vue/eslint-config-typescript)
-[![](https://img.shields.io/npm/v/eslint-plugin-vue?logo=eslint-plugin-vue&style=plastic&label=eslint-plugin-vue)](https://www.npmjs.com/package/eslint-plugin-vue)
-
-#### prettier
-
-> 对`.js`,`.ts`,`.jsx`,`.tsx`,`.vue`,`.css`,`.md`,`.json`,`.yml`进行格式化
-
-[![](https://img.shields.io/npm/v/@trivago/prettier-plugin-sort-imports?logo=@trivago/prettier-plugin-sort-imports&style=plastic&label=@trivago/prettier-plugin-sort-imports)](https://www.npmjs.com/package/@trivago/prettier-plugin-sort-imports)
-[![](https://img.shields.io/npm/v/prettier?logo=prettier&style=plastic&label=prettier)](https://www.npmjs.com/package/prettier)
-[![](https://img.shields.io/npm/v/prettier-plugin-tailwindcss?logo=prettier-plugin-tailwindcss&style=plastic&label=prettier-plugin-tailwindcss)](https://www.npmjs.com/package/prettier-plugin-tailwindcss)
-
-#### stylelint
-
-> 对`.css`,`.vue`进行代码检查
-
-[![](https://img.shields.io/npm/v/stylelint?logo=stylelint&style=plastic&label=stylelint)](https://www.npmjs.com/package/stylelint)
-[![](https://img.shields.io/npm/v/stylelint-config-idiomatic-order?logo=stylelint-config-idiomatic-order&style=plastic&label=stylelint-config-idiomatic-order)](https://www.npmjs.com/package/stylelint-config-idiomatic-order)
-[![](https://img.shields.io/npm/v/stylelint-config-prettier?logo=stylelint-config-prettier&style=plastic&label=stylelint-config-prettier)](https://www.npmjs.com/package/stylelint-config-prettier)
-[![](https://img.shields.io/npm/v/stylelint-config-recommended-vue?logo=stylelint-config-recommended-vue&style=plastic&label=stylelint-config-recommended)](https://www.npmjs.com/package/stylelint-config-recommended)
-[![](https://img.shields.io/npm/v/stylelint-config-standard?logo=stylelint-config-standard&style=plastic&label=stylelint-config-standard)](https://www.npmjs.com/package/stylelint-config-standard)
-
-#### css 相关
-
-由于期望所有组件样式都是`@shiyue/ui`完成，所以业务项目只需要做好组件解偶，所以采用`tailwindcss`是最优解
-
-##### tailwindcss
-
-[![](https://img.shields.io/npm/v/tailwindcss?logo=tailwindcss&style=plastic&label=tailwindcss)](https://www.npmjs.com/package/tailwindcss)
-[![](https://img.shields.io/npm/v/@tailwindcss/aspect-ratio?logo=@tailwindcss/aspect-ratio&style=plastic&label=@tailwindcss/aspect-ratio)](https://www.npmjs.com/package/@tailwindcss/aspect-ratio)
-
-##### postcss
-
-[![](https://img.shields.io/npm/v/postcss?logo=postcss&style=plastic&label=postcss)](https://www.npmjs.com/package/postcss)
-[![](https://img.shields.io/npm/v/postcss-html?logo=postcss-html&style=plastic&label=postcss-html)](https://www.npmjs.com/package/postcss-html)
-[![](https://img.shields.io/npm/v/postcss-nesting?logo=postcss-nesting&style=plastic&label=postcss-nesting)](https://www.npmjs.com/package/postcss-nesting)
-[![](https://img.shields.io/npm/v/postcss-preset-env?logo=postcss-preset-env&style=plastic&label=postcss-preset-env)](https://www.npmjs.com/package/postcss-preset-env)
-[![](https://img.shields.io/npm/v/postcss-reporter?logo=postcss-reporter&style=plastic&label=postcss-reporter)](https://www.npmjs.com/package/postcss-reporter)
-[![](https://img.shields.io/npm/v/autoprefixer?logo=autoprefixer&style=plastic&label=autoprefixer)](https://www.npmjs.com/package/autoprefixer)
-[![](https://img.shields.io/npm/v/cssnano?logo=cssnano&style=plastic&label=cssnano)](https://www.npmjs.com/package/cssnano)
-
-### 开发
-
-[![](https://img.shields.io/npm/v/vue?logo=vuedotjs&style=plastic&label=vue)](https://www.npmjs.com/package/vue)
-[![](https://img.shields.io/npm/v/vue-router?logo=vue-router&style=plastic&label=vue-router)](https://www.npmjs.com/package/vue-router)
-[![](https://img.shields.io/npm/v/pinia?logo=pinia&style=plastic&label=pinia)](https://www.npmjs.com/package/pinia)
-[![](https://img.shields.io/npm/v/vue-i18n?logo=vue-i18n&style=plastic&label=vue-i18n)](https://www.npmjs.com/package/vue-18n)
-[![](https://img.shields.io/npm/v/@vueuse/core?logo=@vueuse/core&style=plastic&label=@vueuse/core)](https://www.npmjs.com/package/@vueuse/core)
-[![](https://img.shields.io/npm/v/@vueuse/components?logo=@vueuse/components&style=plastic&label=@vueuse/components)](https://www.npmjs.com/package/@vueuse/components)
-[![](https://img.shields.io/npm/v/@vueuse/router?logo=@vueuse/router&style=plastic&label=@vueuse/router)](https://www.npmjs.com/package/@vueuse/router)
-
-### 图标
-
-[![](https://img.shields.io/npm/v/iconify?logo=iconify&style=plastic&label=iconify)](https://www.npmjs.com/package/iconify)
-[![](https://img.shields.io/npm/v/@iconify/types?logo=@iconify/types&style=plastic&label=@iconify/types)](https://www.npmjs.com/package/@iconify/types)
-[![](https://img.shields.io/npm/v/@iconify/vue?logo=@iconify/vue&style=plastic&label=@iconify/vue)](https://www.npmjs.com/package/@iconify/vue)
-
-### 测试和假数据
-
-#### 假数据
-
-[![](https://img.shields.io/npm/v/@faker-js/faker?logo=@faker-js/faker&style=plastic&label=@faker-js/faker)](https://www.npmjs.com/package/@faker-js/faker)
-
-#### e2e
-
-[![](https://img.shields.io/npm/v/@playwright/test?logo=@playwright/test&style=plastic&label=@playwright/test)](https://www.npmjs.com/package/@playwright/test)
-
-#### unit
-
-[![](https://img.shields.io/npm/v/vitest?logo=vitest&style=plastic&label=vitest)](https://www.npmjs.com/package/vitest)
-[![](https://img.shields.io/npm/v/@vue/test-utils?logo=@vue/test-utils&style=plastic&label=@vue/test-utils)](https://www.npmjs.com/package/@vue/test-utils)
-[![](https://img.shields.io/npm/v/@pinia/testing?logo=@pinia/testing&style=plastic&label=@pinia/testing)](https://www.npmjs.com/package/@pinia/testing)
-[![](https://img.shields.io/npm/v/@vitest/coverage-c8?logo=@vitest/coverage-c8&style=plastic&label=@vitest/coverage-c8)](https://www.npmjs.com/package/@vitest/coverage-c8)
-[![](https://img.shields.io/npm/v/@vitest/ui?logo=@vitest/ui&style=plastic&label=@vitest/ui)](https://www.npmjs.com/package/@vitest/ui)
-[![](https://img.shields.io/npm/v/jsdom?logo=jsdom&style=plastic&label=jsdom)](https://www.npmjs.com/package/jsdom)
-[![](https://img.shields.io/npm/v/@types/jsdom?logo=@types/jsdom&style=plastic&label=@types/jsdom)](https://www.npmjs.com/package/@types/jsdom)
+    - **`husky`** [![](https://img.shields.io/npm/v/husky?logo=npm)](https://www.npmjs.com/package/husky) [![](https://img.shields.io/github/stars/typicode/husky?logo=github)](https://github.com/typicode/husky) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://typicode.github.io/husky)
+    - **`lint-staged`** [![](https://img.shields.io/npm/v/lint-staged?logo=npm)](https://www.npmjs.com/package/lint-staged) [![](https://img.shields.io/github/stars/okonet/lint-staged?logo=github)](https://github.com/okonet/lint-staged)
+    - `git commit`规范 - `git commit`改为`pnpm run commit`并将提交信息规范化
+      - **`@comitlint/cli`** [![](https://img.shields.io/npm/v/@commitlint/cli?logo=npm)](https://www.npmjs.com/package/@commitlint/cli) [![](https://img.shields.io/github/stars/conventional-changelog/commitlint?logo=github)](https://github.com/conventional-changelog/commitlint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://commitlint.js.org)
+      - **`@commitlint/config-conventional`** [![](https://img.shields.io/npm/v/@commitlint/config-conventional?logo=npm)](https://www.npmjs.com/package/@commitlint/config-conventional) [![](https://img.shields.io/github/stars/conventional-changelog/commitlint?logo=github)](https://github.com/conventional-changelog/commitlint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://commitlint.js.org)
+      - **`@commitlint/cz-commitlint`** [![](https://img.shields.io/npm/v/@commitlint/cz-commitlint?logo=npm)](https://www.npmjs.com/package/@commitlint/cz-commitlint) [![](https://img.shields.io/github/stars/conventional-changelog/commitlint?logo=github)](https://github.com/conventional-changelog/commitlint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://commitlint.js.org)
+      - **`@commitlint/fotmat`** [![](https://img.shields.io/npm/v/@commitlint/format?logo=npm)](https://www.npmjs.com/package/@commitlint/cz-commitlint) [![](https://img.shields.io/github/stars/conventional-changelog/commitlint?logo=github)](https://github.com/conventional-changelog/commitlint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://commitlint.js.org)
+      - **`inquirer`** [![](https://img.shields.io/npm/v/inquirer?logo=npm)](https://www.npmjs.com/package/inquirer) [![](https://img.shields.io/github/stars/SBoudrias/Inquirer.js?logo=github)](https://github.com/SBoudrias/Inquirer.js)
+  - eslint
+    - **`eslint`** [![](https://img.shields.io/npm/v/eslint?logo=npm)](https://www.npmjs.com/package/eslint) [![](https://img.shields.io/github/stars/eslint/eslint?logo=github)](https://github.com/eslint/eslint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://eslint.org)
+      > 对`.js`,`.ts`,`.jsx`,`.tsx`,`.vue` 进行代码检查
+    - **`@rushstack/eslint-patch`** [![](https://img.shields.io/npm/v/@rushstack/eslint-patch?logo=npm)](https://www.npmjs.com/package/@rushstack/eslint-patch) [![](https://img.shields.io/github/stars/microsoft/rushstack?logo=github)](https://github.com/microsoft/rushstack) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://rushstack.io/)
+    - **`eslint-config-prettier`** [![](https://img.shields.io/npm/v/@vue/eslint-config-prettier?logo=npm)](https://www.npmjs.com/package/@vue/eslint-config-prettier) [![](https://img.shields.io/github/stars/vuejs/eslint-config-prettier?logo=github)](https://github.com/vuejs/eslint-config-prettier)
+    - **`eslilnt-config-typescript`** [![](https://img.shields.io/npm/v/@vue/eslint-config-typescript?logo=npm)](https://www.npmjs.com/package/@vue/eslint-config-typescript) [![](https://img.shields.io/github/stars/vuejs/eslint-config-typescript?logo=github)](https://github.com/vuejs/eslint-config-typescript)
+    - **`eslint-plugin-vue`** [![](https://img.shields.io/npm/v/eslint-plugin-vue?logo=npm)](https://www.npmjs.com/package/eslint-plugin-vue) [![](https://img.shields.io/github/stars/vuejs/eslint-plugin-vue?logo=github)](https://github.com/vuejs/eslint-plugin-vue) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://eslint.vuejs.org)
+  - prettier
+    - **`prettier`** [![](https://img.shields.io/npm/v/prettier?logo=npm)](https://www.npmjs.com/package/prettier) [![](https://img.shields.io/github/stars/prettier/prettier?logo=github)](https://github.com/prettier/prettier) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://prettier.io)
+      > 对`.js`,`.ts`,`.jsx`,`.tsx`,`.vue`,`.css`,`.md`,`.json`,`.yml`进行格式化
+    - **`@trivago/prettier-plugin-sort-imports`** [![](https://img.shields.io/npm/v/@trivago/prettier-plugin-sort-imports?logo=npm)](https://www.npmjs.com/package/@trivago/prettier-plugin-sort-imports) [![](https://img.shields.io/github/stars/trivago/prettier-plugin-sort-imports?logo=github)](https://github.com/trivago/prettier-plugin-sort-imports)
+    - **`prettier-plugin-tailwindcss`** [![](https://img.shields.io/npm/v/prettier-plugin-tailwindcss?logo=npm)](https://www.npmjs.com/package/prettier-plugin-tailwindcss) [![](https://img.shields.io/github/stars/tailwindlabs/prettier-plugin-tailwindcss?logo=github)](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+  - stylelint
+    - **`stylelint`** [![](https://img.shields.io/npm/v/stylelint?logo=npm)](https://www.npmjs.com/package/stylelint) [![](https://img.shields.io/github/stars/stylelint/stylelint?logo=github)](https://github.com/stylelint/stylelint) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://stylelint.io)
+      > 对`.css`,`.vue`进行代码检查
+    - **`stylelint-config-idiomatic-order`** [![](https://img.shields.io/npm/v/stylelint-config-idiomatic-order?logo=npm)](https://www.npmjs.com/package/stylelint-config-idiomatic-order) [![](https://img.shields.io/github/stars/ream88/stylelint-config-idiomatic-order?logo=github)](https://github.com/ream88/stylelint-config-idiomatic-order)
+    - **`stylelint-config-prettier`** [![](https://img.shields.io/npm/v/stylelint-config-prettier?logo=npm)](https://www.npmjs.com/package/stylelint-config-prettier) [![](https://img.shields.io/github/stars/prettier/stylelint-config-prettier?logo=github)](https://github.com/prettier/stylelint-config-prettier)
+    - **`stylelint-config-recommended-vue`** [![](https://img.shields.io/npm/v/stylelint-config-recommended-vue?logo=npm)](https://www.npmjs.com/package/stylelint-config-recommended) [![](https://img.shields.io/github/stars/stylelint/stylelint-config-recommended?logo=github)](https://github.com/stylelint/stylelint-config-recommended)
+    - **`stylelint-config-standard`** [![](https://img.shields.io/npm/v/stylelint-config-standard?logo=)](https://www.npmjs.com/package/stylelint-config-standard) [![](https://img.shields.io/github/stars/stylelint/stylelint-config-standard?logo=github)](https://github.com/stylelint/stylelint-config-standard)
+- css 相关
+  - postcss
+    - **`postcss`** [![](https://img.shields.io/npm/v/postcss?logo=npm)](https://www.npmjs.com/package/postcss) [![](https://img.shields.io/github/stars/postcss/postcss?logo=github)](https://github.com/postcss/postcss) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://postcss.org/)
+    - **`postcss-html`** [![](https://img.shields.io/npm/v/postcss-html?logo=npm)](https://www.npmjs.com/package/postcss-html) [![](https://img.shields.io/github/stars/ota-meshi/postcss-html?logo=github)](https://github.com/ota-meshi/postcss-html) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://ota-meshi.github.io/postcss-html)
+    - **`postcss-nesting`** [![](https://img.shields.io/npm/v/postcss-nesting?logo=npm)](https://www.npmjs.com/package/postcss-nesting) [![](https://img.shields.io/github/stars/csstools/postcss-plugins?logo=github)](https://github.com/csstools/postcss-plugins) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://preset-env.cssdb.org)
+    - **`postcss-preset-env`** [![](https://img.shields.io/npm/v/postcss-preset-env?logo=npm)](https://www.npmjs.com/package/postcss-preset-env) [![](https://img.shields.io/github/stars/csstools/postcss-plugins?logo=github)](https://github.com/csstools/postcss-plugins) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://preset-env.cssdb.org)
+    - **`postcss-reporter`** [![](https://img.shields.io/npm/v/postcss-reporter?logo=npm)](https://www.npmjs.com/package/postcss-reporter) [![](https://img.shields.io/github/stars/postcss/postcss-reporter?logo=github)](https://github.com/postcss/postcss-reporter)
+    - **`autoprefixer`** [![](https://img.shields.io/npm/v/autoprefixer?logo=npm)](https://www.npmjs.com/package/autoprefixer) [![](https://img.shields.io/github/stars/postcss/autoprefixer?logo=github)](https://github.com/postcss/autoprefixer)
+    - **`cssnano`** [![](https://img.shields.io/npm/v/cssnano?logo=npm)](https://www.npmjs.com/package/cssnano) [![](https://img.shields.io/github/stars/cssnano/cssnano?logo=github)](https://github.com/cssnano/cssnano) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://cssnano.co/)
+  - tailwindcss
+    - **`tailwindcss`** [![](https://img.shields.io/npm/v/tailwindcss?logo=npm)](https://www.npmjs.com/package/tailwindcss) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss?logo=github)](https://github.com/tailwindlabs/tailwindcss) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://tailwindcss.com)
+    - **`@tailwindcss/aspect-ratio`** [![](https://img.shields.io/npm/v/@tailwindcss/aspect-ratio?logo=npm)](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss-aspect-ratio?logo=github)](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
+    - **`@tailwindcss/typography`** [![](https://img.shields.io/npm/v/@tailwindcss/typography?logo=npm)](https://www.npmjs.com/package/@tailwindcss/typography) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss-typography?logo=github)](https://github.com/tailwindlabs/tailwindcss-typography) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://tailwindcss.com/docs/typography-plugin)
+ - vue
+   - **`vue`** [![](https://img.shields.io/npm/v/vue?logo=npm)](https://www.npmjs.com/package/vue) [![](https://img.shields.io/github/stars/vuejs/core?logo=github)](https://github.com/vuejs/core) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vuejs.org)
+   - **`vue-router`** [![](https://img.shields.io/npm/v/vue-router?logo=npm)](https://www.npmjs.com/package/vue-router) [![](https://img.shields.io/github/stars/vuejs/router?logo=github)](https://github.com/vuejs/router) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://router.vuejs.org)
+   - **`pinia`** [![](https://img.shields.io/npm/v/pinia?logo=npm)](https://www.npmjs.com/package/pinia) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org)
+   - **`vue-i18n`** [![](https://img.shields.io/npm/v/vue-i18n?logo=npm)](https://www.npmjs.com/package/vue-i18n) [![](https://img.shields.io/github/stars/intlify/vue-i18n-next?logo=github)](https://github.com/intlify/vue-i18n-next) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vue-i18n.intlify.dev/)
+   - **`@vueuse/core`** [![](https://img.shields.io/npm/v/@vueuse/core?logo=npm)](https://www.npmjs.com/package/@vueuse/core) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org)
+   - **`@vueuse/components`** [![](https://img.shields.io/npm/v/@vueuse/components?logo=npm)](https://www.npmjs.com/package/@vueuse/components) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/functions.html#category=%40Router)
+   - **`@vueuse/router`** [![](https://img.shields.io/npm/v/@vueuse/router?logo=npm)](https://www.npmjs.com/package/@vueuse/router) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/guide/components.html)
+  - 图标
+    - iconify
+      - **`@iconify/vue`** [![](https://img.shields.io/npm/v/@iconify/vue?logo=npm)](https://www.npmjs.com/package/@iconify/vue) [![](https://img.shields.io/github/stars/iconify/iconify?logo=github)](https://github.com/iconify/iconify) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://iconify.design/)
+  - 动画
+    - **`d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/d3/d3?logo=github)](https://github.com/d3/d3) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://d3js.org/)
+    - **`@types/d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/@types/d3?logo=github)](https://github.com/@types/d3)
+    - 2d
+      - **`pixijs`** [![](https://img.shields.io/npm/v/pixijs?logo=npm)](https://www.npmjs.com/package/pixijs) [![](https://img.shields.io/github/stars/pixijs/pixijs?logo=github)](https://github.com/pixijs/pixijs) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pixijs.com)
+    - 3d
+      - **`babylonjs`** [![](https://img.shields.io/npm/v/babylonjs?logo=npm)](https://www.npmjs.com/package/babylonjs) [![](https://img.shields.io/github/stars/BabylonJS/Babylon.js?logo=github)](https://github.com/BabylonJS/Babylon.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.babylonjs.com)
+  - 工具
+    - **`nanoid`** [![](https://img.shields.io/npm/v/nanoid?logo=npm)](https://www.npmjs.com/package/nanoid) [![](https://img.shields.io/github/stars/ai/nanoid?logo=github)](https://github.com/ai/nanoid) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://zelark.github.io/nano-id-cc)
+    - **`@tinymce/tinymce-vue`** [![](https://img.shields.io/npm/v/@tinymce/tinymce-vue?logo=npm)](https://www.npmjs.com/package/@tinymce/tinymce-vue) [![](https://img.shields.io/github/stars/tinymce/tinymce-vue?logo=github)](https://github.com/tinymce/tinymce-vue) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.tiny.cloud)
+    - **`highlight.js`** [![](https://img.shields.io/npm/v/highlight.js?logo=npm)](https://www.npmjs.com/package/highlight.js) [![](https://img.shields.io/github/stars/highlightjs/highlight.js?logo=github)](https://github.com/highlightjs/highlight.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://highlightjs.org/)
+  - 测试和假数据
+    - 假数据
+      - **`@faker-js/faker`** [![](https://img.shields.io/npm/v/@faker-js/faker?logo=npm)](https://www.npmjs.com/package/@faker-js/faker) [![](https://img.shields.io/github/stars/faker-js/faker?logo=github)](https://github.com/faker-js/faker) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://fakerjs.dev)
+    - e2e测试
+      - **`@playwright/test`** [![](https://img.shields.io/npm/v/@playwright/test?logo=npm)](https://www.npmjs.com/package/@playwright/test) [![](https://img.shields.io/github/stars/Microsoft/playwright?logo=github)](https://github.com/Microsoft/playwright) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://playwright.dev/)
+    - unit测试
+      - **`vitest`** [![](https://img.shields.io/npm/v/vitest?logo=npm)](https://www.npmjs.com/package/vitest) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev)
+      - **`@vue/test-utils`** [![](https://img.shields.io/npm/v/@vue/test-utils?logo=npm)](https://www.npmjs.com/package/@vue/test-utils) [![](https://img.shields.io/github/stars/vuejs/test-utils?logo=github)](https://github.com/vuejs/test-utils) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://test-utils.vuejs.org/)
+      - **`@pinia/testing`** [![](https://img.shields.io/npm/v/@pinia/testing?logo=npm)](https://www.npmjs.com/package/@pinia/testing) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org/cookbook/testing.html#testing-stores)
+      - **`@vitest/coverage-c8`** [![](https://img.shields.io/npm/v/@vitest/coverage-c8?logo=npm)](https://www.npmjs.com/package/@vitest/coverage-c8) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/coverage.html#coverage)
+      - **`@vitest/ui`** [![](https://img.shields.io/npm/v/@vitest/ui?logo=npm)](https://www.npmjs.com/package/@vitest/ui) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/ui.html)
+      - **`jsdom`** [![](https://img.shields.io/npm/v/jsdom?logo=npm)](https://www.npmjs.com/package/jsdom) [![](https://img.shields.io/github/stars/jsdom/jsdom?logo=github)](https://github.com/jsdom/jsdom)
+      - **`@types/jsdom`** [![](https://img.shields.io/npm/v/@types/jsdom?logo=npm)](https://www.npmjs.com/package/@types/jsdom) [![](https://img.shields.io/github/stars/DefinitelyTyped/DefinitelyTyped?logo=github)](https://github.com/DefinitelyTyped/DefinitelyTyped)
+    - 打包分析
+      - **`rollup-plugin-visualizer`** [![](https://img.shields.io/npm/v/rollup-plugin-visualizer?logo=npm)](https://www.npmjs.com/package/rollup-plugin-visualizer) [![](https://img.shields.io/github/stars/btd/rollup-plugin-visualizer?logo=github)](https://github.com/btd/rollup-plugin-visualizer)
