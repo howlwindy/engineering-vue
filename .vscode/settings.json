@@ -36,7 +36,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -61,9 +61,7 @@
   },
   // tailwindcss <---
   // i18n --->
-  "i18n-ally.localesPaths": [
-    "src/locales"
-  ],
+  "i18n-ally.localesPaths": ["src/locales"],
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   }

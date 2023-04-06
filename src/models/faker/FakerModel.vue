@@ -1,11 +1,10 @@
 <script setup lang="ts">
+import { useGlobalStore } from '@/store'
 import { uFaker, uLocaleLocalStorage } from '@/utils'
 import { faker } from '@faker-js/faker'
 import { Icon } from '@iconify/vue'
 import { QBtn } from 'quasar'
 import { ref } from 'vue'
-
-import { useGlobalStore } from '@/store/global.store'
 
 const globalStore = useGlobalStore()
 </script>

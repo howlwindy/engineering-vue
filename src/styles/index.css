@@ -8,7 +8,7 @@
   }
 
   * {
-    @apply text-slate-900 dark:text-slate-50 transition-all duration-300 ease-in-out;
+    @apply text-slate-900 transition-all duration-300 ease-in-out dark:text-slate-50;
   }
 
   ::-webkit-scrollbar {
@@ -21,7 +21,7 @@
   }
 
   .q-drawer {
-    @apply bg-slate-50/95 dark:bg-slate-900/95 backdrop-blur;
+    @apply bg-slate-50/95 backdrop-blur dark:bg-slate-900/95;
   }
 
   .q-drawer__backdrop {
@@ -29,10 +29,13 @@
   }
 
   .q-scrollarea__thumb {
-    @apply rounded-full w-2 bg-slate-800/80 dark:bg-slate-100/80  backdrop-blur !important;
+    @apply w-2 rounded-full bg-slate-800/80 backdrop-blur  dark:bg-slate-100/80 !important;
   }
 
-  .q-menu, .q-list, .q-item, .q-card {
+  .q-menu,
+  .q-list,
+  .q-item,
+  .q-card {
     @apply bg-slate-100 dark:bg-slate-800;
   }
 }

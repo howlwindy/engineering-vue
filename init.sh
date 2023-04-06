@@ -1186,7 +1186,7 @@ import {
   QCardSection,
 } from 'quasar'
 
-import { useGlobalStore } from '@/store/global.store'
+import { useGlobalStore } from '@/store'
 
 const globalStore = useGlobalStore()
 </script>
@@ -1225,7 +1225,7 @@ cat >$storeModelTestF <<EOF
 import { mount } from '@vue/test-utils'
 import StoreModel from '@/models/store/StoreModel.vue'
 import { createTestingPinia } from '@pinia/testing'
-import { useGlobalStore } from '@/store/global.store'
+import { useGlobalStore } from '@/store'
 
 describe('StoreModel', () => {
   const wrapper = mount(StoreModel, {

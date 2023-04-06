@@ -1,5 +1,5 @@
-import { config } from '@vue/test-utils'
 import i18n from '@/locale'
+import { config } from '@vue/test-utils'
 
 config.global.plugins = [i18n]
 config.global.mocks = {

@@ -1,9 +1,10 @@
 /** @type {import('vite').UserConfig} */
-import { visualizer } from 'rollup-plugin-visualizer'
-import { defineConfig, loadEnv, UserConfig } from 'vite'
-import postcss from './postcss.config.js'
 import Vue from '@vitejs/plugin-vue'
 import { URL, fileURLToPath } from 'node:url'
+import { visualizer } from 'rollup-plugin-visualizer'
+import { UserConfig, defineConfig, loadEnv } from 'vite'
+
+import postcss from './postcss.config.js'
 
 // https://vitejs.dev/config/
 export default defineConfig(async ({ command, mode, ssrBuild }) => {

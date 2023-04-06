@@ -8,7 +8,22 @@
 node -v
 ```
 
-查看本地所有 node 版本[官方文档](https://www.npmjs.com/package/n)
+查看 pnpm 是否存在
+
+```bash
+pnpm -v
+```
+
+如果pnpm未安装请查看[官网](https://pnpm.io/installation)
+安装完成后运行`pnpm add 包名`如果报错
+```bash
+pnpm setup
+```
+安装[node版本管理器](https://www.npmjs.com/package/n)
+```bash
+pnpm add -g n
+```
+查看本地所有 node 版本
 
 ```bash
 sudo n
@@ -22,18 +37,6 @@ sudo n
 sudo n stable
 ```
 
-查看 pnpm 是否存在
-
-```bash
-pnpm -v
-```
-
-如果不存在，将包管理器切换到 pnpm[官方文档](https://pnpm.io/installation)
-
-```bash
-sudo corepack enable
-```
-
 # 项目目录及配置
 
 > 目前先 ctrlCV 吧，后续再写一个 cli
@@ -44,54 +47,95 @@ sudo corepack enable
 pnpm create vite
 ```
 
-创建下述文件
-
-```bash
-
-```
-
 - **.env** - vite 环境变量
-  - **.env** - development 和 production 的公共
-  - **.env.development** - 开发模式
-  - **.env.production** - 生产模式
+  - [.env](.env/.env) - development 和 production 的公共
+  - [.env.development](.env/.env.development) - 开发模式
+  - [.env.production](.env/.env.production) - 生产模式
 - **.husky** - husky 所有 bash
+  - [commit-msg](.husky/commit-msg) - `git commit`拦截
 - **.vscode** - vscode 的配置
-- **e2e** - playwright 进行 e2e 测试
+  - [extensions.json]('.vscode/extensions.json') - 本项目所要用到的vscode插件
+  - [settings.json]('.vscode/settings.json') - 本项目所要用到的vscode插件的配置
+- **e2e** - 所有e2e测试
 - **public** - 资源文件 [官方文档](https://vitejs.dev/guide/assets.html#the-public-directory)
-- **src**
-  - **components** - 低层次组件
-  - **consts** - 常量
+  - **icons** - 所有图标
+  - **imgs** - 所有图片
+- **src** - 源码
+  - **components** - 所有低层次组件
+  - **consts** - 所有常量
+    - [global.const.ts](src/consts/global.const.ts) - 全局常量
+    - [index.ts](src/consts/index.ts) - 所有consts导出
   - **locale** - i18n
+    - **en-US** - english
+      - [global.locale.ts](src/locales/en-US/global.locale.ts) - 全局english
+      - [index.ts](src/locales/en-US/index.ts) - 所有english导出
+    - **zh-CN** - 简体中文
+      - [global.locale.ts](src/locales/zh-CN/global.locale.ts) - 全局简体中文
+      - [index.ts](src/locales/zh-CN/index.ts) - 所有简体中文导出
+    - [index.ts](src/locales/index.ts) - 所有i18n导出
   - **models** - 高层次组件
+    - **faker** - 假数据组件
+      - **__tests__** - 本组件所有单元测试
+        - [faker.unit.spec.ts](src/models/faker/__tests__/faker.unit.spec.ts) - 本组件单元测试
+      - [FakerModel.vue](src/models/faker/FakerModel.vue) - 假数据组件
+    - **i18n** - i18n组件
+      - **__tests__** - 本组件所有单元测试
+        - [i18n.unit.spec.ts](src/models/i18n/__tests__/i18n.unit.spec.ts) - 本组件单元测试
+      - [I18nModel.vue](src/models/i18n/I18nModel.vue) - i18n组件
+    - **store** - pinia组件
+      - **__tests__** - 本组件所有单元测试
+        - [store.unit.spec.ts](src/models/store/__tests__/store.unit.spec.ts) - 本组件单元测试
+      - [StoreModel.vue](src/models/store/StoreModel.vue) - pinia组件
+    - **theme** - 外观组件
+      - **__tests__** - 本组件所有单元测试
+        - [theme.unit.spec.ts](src/models/theme/__tests__/theme.unit.spec.ts) - 本组件单元测试
+      - [ThemeModel.vue](src/models/theme/ThemeModel.vue) - 外观组件
+    - [index.ts](src/models/index.ts) - 所有组件导出
   - **pages** - 页面
+    - **home** - home页面
+      - **__tests__** - 本组件所有单元测试
+        - [home.unit.spec.ts](src/pages/home/__tests__/home.unit.spec.ts) - 本组件单元测试
+      - [HomePage.vue](src/pages/home/HomePage.vue) - home页面
   - **router** - vue-router
+    - [index.ts](src/router/index.ts) - vue-router
+    - [routes.ts](src/router/routes.ts) - 所有route
   - **store** - pinia
+    - [global.store.ts](src/store/global.store.ts) - 全局global
+    - [index.ts](src/store/index.ts) - 所有store导出
   - **styles** - css/tailwind
+    - [index.css](src/styles/index.css) - 根样式
   - **types** - enum/type/interface
+    - [global.type.ts](src/types/global.type.ts) - 全局类型
+    - [index.ts](src/types/index.ts) - 所有类型导出
   - **utils** - 工具
-  - **App.vue**
-  - **main.ts**
-- **.editorconfig** - 所有编辑器大致上格式一致化
-- **.eslintignore** - 不需要 eslint 检查的文件或目录
-- **.eslintrc.cjs** - eslint 配置
-- **.gitignore**
-- **.npmrc** - 改变 pnpm 安装时的某些表现
-- **.prettierignore** - 不需要 prettier 检查的文件或目录
-- **.prettierrc.cjs** - prettier 配置
-- **.stylelintignore** - 不需要 stylelint 检查的文件或目录
-- **.stylelintrc.yml** - stylelint 配置
-- **CHANGLELOG.md** - 版本 log
-- **commitlint.config.cjs** - git 规范配置
-- **index.html**
-- **package.json**
-- **playwright.config.ts** - playwright 配置
-- **postcss.config.js** - 配置 tailwind 和其他 css 语法
-- **README.md** - 项目说明
-- **tailwind.config.cjs** - tailwindcss 配置
-- **tsconfig.json** - 当前项目 ts 的表现
-- **vite.config.ts** - vite 配置
-- **vitest.config.ts** - vitest 配置
-- **vitest.setup.ts** - vitest启动
+    - [faker.util.ts](src/utils/faker.util.ts) - faker工具
+    - [index.ts](src/utils//index.ts) - 所有工具导出
+    - [storage.util.ts](src/utils/storage.util.ts) - localeStorage/sessionStorage工具
+  - App.vue - 根组件
+  - main.ts - 入口文件
+- **typing** - 所有.d.ts
+  - [vue-shim.d.ts](typing/vue-shim.d.ts) - ts对.vue的识别
+- [.commitlintrc.cjs](.commitlintrc.cjs) - git 规范配置
+- [.editorconfig](.editorconfig) - 所有编辑器大致上格式一致化
+- [.eslintignore](.eslintignore) - 不需要 eslint 检查的文件或目录
+- [.eslintrc.cjs](.eslintrc.cjs) - eslint 配置
+- [.gitignore](.gitignore) - 不会被git添加的目录/文件
+- [.npmrc](.npmrc) - 改变 pnpm 安装时的某些表现
+- [.prettierignore](.prettierignore) - 不需要 prettier 检查的文件或目录
+- [.prettierrc.cjs](.prettierrc.cjs) - prettier 配置
+- [.stylelintignore](.stylelintignore) - 不需要 stylelint 检查的文件或目录
+- [.stylelintrc.cjs](.stylelintrc.cjs) - stylelint 配置
+- [CHANGLELOG.md](CHANGLELOG.md) - 版本 log
+- [index.html](index.html)
+- [package.json](package.json)
+- [playwright.config.ts](playwright.config.ts) - playwright 配置
+- [postcss.config.js](postcss.config.js) - 配置 tailwind 和其他 css 语法
+- [README.md](README.md) - 项目说明
+- [tailwind.config.cjs](tailwind.config.cjs) - tailwindcss 配置
+- [tsconfig.json](tsconfig.json) - 当前项目 ts 的表现
+- [vite.config.ts](vite.config.ts) - vite 配置
+- [vitest.config.ts](vitest.config.ts) - vitest 配置
+- [vitest.setup.ts](vitest.setup.ts) - vitest 启动
 
 # 需要的库及相关文件配置
 
@@ -100,7 +144,7 @@ pnpm create vite
 - 工程化
   - **`vite`** [![](https://img.shields.io/npm/v/vite?logo=npm)](https://www.npmjs.com/package/vite) [![](https://img.shields.io/github/stars/vitejs/vite?logo=github)](https://github.com/vitejs/vite) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitejs.dev)
   - **`typescript`** [![](https://img.shields.io/npm/v/typescript?logo=npm)](https://www.npmjs.com/package/typescript) [![](https://img.shields.io/github/stars/microsoft/TypeScript?logo=github)](https://github.com/microsoft/TypeScript) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.typescriptlang.org)
-    >  统一项目`ts`版本
+    > 统一项目`ts`版本
   - **`rimraf`** [![](https://img.shields.io/npm/v/rimraf?logo=npm)](https://www.npmjs.com/package/rimraf) [![](https://img.shields.io/github/stars/isaacs/rimraf?logo=github)](https://github.com/isaacs/rimraf)
     > 在打包前删除已经存在的`dist`目录
   - git hooks 拦截 - 用于执行某些 git 命令时先进行代码检查或其他操作
@@ -144,40 +188,40 @@ pnpm create vite
     - **`tailwindcss`** [![](https://img.shields.io/npm/v/tailwindcss?logo=npm)](https://www.npmjs.com/package/tailwindcss) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss?logo=github)](https://github.com/tailwindlabs/tailwindcss) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://tailwindcss.com)
     - **`@tailwindcss/aspect-ratio`** [![](https://img.shields.io/npm/v/@tailwindcss/aspect-ratio?logo=npm)](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss-aspect-ratio?logo=github)](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
     - **`@tailwindcss/typography`** [![](https://img.shields.io/npm/v/@tailwindcss/typography?logo=npm)](https://www.npmjs.com/package/@tailwindcss/typography) [![](https://img.shields.io/github/stars/tailwindlabs/tailwindcss-typography?logo=github)](https://github.com/tailwindlabs/tailwindcss-typography) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://tailwindcss.com/docs/typography-plugin)
- - vue
-   - **`vue`** [![](https://img.shields.io/npm/v/vue?logo=npm)](https://www.npmjs.com/package/vue) [![](https://img.shields.io/github/stars/vuejs/core?logo=github)](https://github.com/vuejs/core) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vuejs.org)
-   - **`vue-router`** [![](https://img.shields.io/npm/v/vue-router?logo=npm)](https://www.npmjs.com/package/vue-router) [![](https://img.shields.io/github/stars/vuejs/router?logo=github)](https://github.com/vuejs/router) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://router.vuejs.org)
-   - **`pinia`** [![](https://img.shields.io/npm/v/pinia?logo=npm)](https://www.npmjs.com/package/pinia) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org)
-   - **`vue-i18n`** [![](https://img.shields.io/npm/v/vue-i18n?logo=npm)](https://www.npmjs.com/package/vue-i18n) [![](https://img.shields.io/github/stars/intlify/vue-i18n-next?logo=github)](https://github.com/intlify/vue-i18n-next) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vue-i18n.intlify.dev/)
-   - **`@vueuse/core`** [![](https://img.shields.io/npm/v/@vueuse/core?logo=npm)](https://www.npmjs.com/package/@vueuse/core) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org)
-   - **`@vueuse/components`** [![](https://img.shields.io/npm/v/@vueuse/components?logo=npm)](https://www.npmjs.com/package/@vueuse/components) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/functions.html#category=%40Router)
-   - **`@vueuse/router`** [![](https://img.shields.io/npm/v/@vueuse/router?logo=npm)](https://www.npmjs.com/package/@vueuse/router) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/guide/components.html)
-  - 图标
-    - iconify
-      - **`@iconify/vue`** [![](https://img.shields.io/npm/v/@iconify/vue?logo=npm)](https://www.npmjs.com/package/@iconify/vue) [![](https://img.shields.io/github/stars/iconify/iconify?logo=github)](https://github.com/iconify/iconify) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://iconify.design/)
-  - 动画
-    - **`d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/d3/d3?logo=github)](https://github.com/d3/d3) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://d3js.org/)
-    - **`@types/d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/@types/d3?logo=github)](https://github.com/@types/d3)
-    - 2d
-      - **`pixijs`** [![](https://img.shields.io/npm/v/pixijs?logo=npm)](https://www.npmjs.com/package/pixijs) [![](https://img.shields.io/github/stars/pixijs/pixijs?logo=github)](https://github.com/pixijs/pixijs) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pixijs.com)
-    - 3d
-      - **`babylonjs`** [![](https://img.shields.io/npm/v/babylonjs?logo=npm)](https://www.npmjs.com/package/babylonjs) [![](https://img.shields.io/github/stars/BabylonJS/Babylon.js?logo=github)](https://github.com/BabylonJS/Babylon.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.babylonjs.com)
-  - 工具
-    - **`nanoid`** [![](https://img.shields.io/npm/v/nanoid?logo=npm)](https://www.npmjs.com/package/nanoid) [![](https://img.shields.io/github/stars/ai/nanoid?logo=github)](https://github.com/ai/nanoid) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://zelark.github.io/nano-id-cc)
-    - **`@tinymce/tinymce-vue`** [![](https://img.shields.io/npm/v/@tinymce/tinymce-vue?logo=npm)](https://www.npmjs.com/package/@tinymce/tinymce-vue) [![](https://img.shields.io/github/stars/tinymce/tinymce-vue?logo=github)](https://github.com/tinymce/tinymce-vue) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.tiny.cloud)
-    - **`highlight.js`** [![](https://img.shields.io/npm/v/highlight.js?logo=npm)](https://www.npmjs.com/package/highlight.js) [![](https://img.shields.io/github/stars/highlightjs/highlight.js?logo=github)](https://github.com/highlightjs/highlight.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://highlightjs.org/)
-  - 测试和假数据
-    - 假数据
-      - **`@faker-js/faker`** [![](https://img.shields.io/npm/v/@faker-js/faker?logo=npm)](https://www.npmjs.com/package/@faker-js/faker) [![](https://img.shields.io/github/stars/faker-js/faker?logo=github)](https://github.com/faker-js/faker) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://fakerjs.dev)
-    - e2e测试
-      - **`@playwright/test`** [![](https://img.shields.io/npm/v/@playwright/test?logo=npm)](https://www.npmjs.com/package/@playwright/test) [![](https://img.shields.io/github/stars/Microsoft/playwright?logo=github)](https://github.com/Microsoft/playwright) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://playwright.dev/)
-    - unit测试
-      - **`vitest`** [![](https://img.shields.io/npm/v/vitest?logo=npm)](https://www.npmjs.com/package/vitest) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev)
-      - **`@vue/test-utils`** [![](https://img.shields.io/npm/v/@vue/test-utils?logo=npm)](https://www.npmjs.com/package/@vue/test-utils) [![](https://img.shields.io/github/stars/vuejs/test-utils?logo=github)](https://github.com/vuejs/test-utils) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://test-utils.vuejs.org/)
-      - **`@pinia/testing`** [![](https://img.shields.io/npm/v/@pinia/testing?logo=npm)](https://www.npmjs.com/package/@pinia/testing) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org/cookbook/testing.html#testing-stores)
-      - **`@vitest/coverage-c8`** [![](https://img.shields.io/npm/v/@vitest/coverage-c8?logo=npm)](https://www.npmjs.com/package/@vitest/coverage-c8) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/coverage.html#coverage)
-      - **`@vitest/ui`** [![](https://img.shields.io/npm/v/@vitest/ui?logo=npm)](https://www.npmjs.com/package/@vitest/ui) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/ui.html)
-      - **`jsdom`** [![](https://img.shields.io/npm/v/jsdom?logo=npm)](https://www.npmjs.com/package/jsdom) [![](https://img.shields.io/github/stars/jsdom/jsdom?logo=github)](https://github.com/jsdom/jsdom)
-      - **`@types/jsdom`** [![](https://img.shields.io/npm/v/@types/jsdom?logo=npm)](https://www.npmjs.com/package/@types/jsdom) [![](https://img.shields.io/github/stars/DefinitelyTyped/DefinitelyTyped?logo=github)](https://github.com/DefinitelyTyped/DefinitelyTyped)
-    - 打包分析
-      - **`rollup-plugin-visualizer`** [![](https://img.shields.io/npm/v/rollup-plugin-visualizer?logo=npm)](https://www.npmjs.com/package/rollup-plugin-visualizer) [![](https://img.shields.io/github/stars/btd/rollup-plugin-visualizer?logo=github)](https://github.com/btd/rollup-plugin-visualizer)
+- vue
+  - **`vue`** [![](https://img.shields.io/npm/v/vue?logo=npm)](https://www.npmjs.com/package/vue) [![](https://img.shields.io/github/stars/vuejs/core?logo=github)](https://github.com/vuejs/core) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vuejs.org)
+  - **`vue-router`** [![](https://img.shields.io/npm/v/vue-router?logo=npm)](https://www.npmjs.com/package/vue-router) [![](https://img.shields.io/github/stars/vuejs/router?logo=github)](https://github.com/vuejs/router) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://router.vuejs.org)
+  - **`pinia`** [![](https://img.shields.io/npm/v/pinia?logo=npm)](https://www.npmjs.com/package/pinia) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org)
+  - **`vue-i18n`** [![](https://img.shields.io/npm/v/vue-i18n?logo=npm)](https://www.npmjs.com/package/vue-i18n) [![](https://img.shields.io/github/stars/intlify/vue-i18n-next?logo=github)](https://github.com/intlify/vue-i18n-next) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vue-i18n.intlify.dev/)
+  - **`@vueuse/core`** [![](https://img.shields.io/npm/v/@vueuse/core?logo=npm)](https://www.npmjs.com/package/@vueuse/core) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org)
+  - **`@vueuse/components`** [![](https://img.shields.io/npm/v/@vueuse/components?logo=npm)](https://www.npmjs.com/package/@vueuse/components) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/functions.html#category=%40Router)
+  - **`@vueuse/router`** [![](https://img.shields.io/npm/v/@vueuse/router?logo=npm)](https://www.npmjs.com/package/@vueuse/router) [![](https://img.shields.io/github/stars/vueuse/vueuse?logo=github)](https://github.com/vueuse/vueuse) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vueuse.org/guide/components.html)
+- 图标
+  - iconify
+    - **`@iconify/vue`** [![](https://img.shields.io/npm/v/@iconify/vue?logo=npm)](https://www.npmjs.com/package/@iconify/vue) [![](https://img.shields.io/github/stars/iconify/iconify?logo=github)](https://github.com/iconify/iconify) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://iconify.design/)
+- 动画
+  - **`d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/d3/d3?logo=github)](https://github.com/d3/d3) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://d3js.org/)
+  - **`@types/d3`** [![](https://img.shields.io/npm/v/d3?logo=npm)](https://www.npmjs.com/package/d3) [![](https://img.shields.io/github/stars/@types/d3?logo=github)](https://github.com/@types/d3)
+  - 2d
+    - **`pixijs`** [![](https://img.shields.io/npm/v/pixijs?logo=npm)](https://www.npmjs.com/package/pixijs) [![](https://img.shields.io/github/stars/pixijs/pixijs?logo=github)](https://github.com/pixijs/pixijs) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pixijs.com)
+  - 3d
+    - **`babylonjs`** [![](https://img.shields.io/npm/v/babylonjs?logo=npm)](https://www.npmjs.com/package/babylonjs) [![](https://img.shields.io/github/stars/BabylonJS/Babylon.js?logo=github)](https://github.com/BabylonJS/Babylon.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.babylonjs.com)
+- 工具
+  - **`nanoid`** [![](https://img.shields.io/npm/v/nanoid?logo=npm)](https://www.npmjs.com/package/nanoid) [![](https://img.shields.io/github/stars/ai/nanoid?logo=github)](https://github.com/ai/nanoid) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://zelark.github.io/nano-id-cc)
+  - **`@tinymce/tinymce-vue`** [![](https://img.shields.io/npm/v/@tinymce/tinymce-vue?logo=npm)](https://www.npmjs.com/package/@tinymce/tinymce-vue) [![](https://img.shields.io/github/stars/tinymce/tinymce-vue?logo=github)](https://github.com/tinymce/tinymce-vue) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://www.tiny.cloud)
+  - **`highlight.js`** [![](https://img.shields.io/npm/v/highlight.js?logo=npm)](https://www.npmjs.com/package/highlight.js) [![](https://img.shields.io/github/stars/highlightjs/highlight.js?logo=github)](https://github.com/highlightjs/highlight.js) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://highlightjs.org/)
+- 测试和假数据
+  - 假数据
+    - **`@faker-js/faker`** [![](https://img.shields.io/npm/v/@faker-js/faker?logo=npm)](https://www.npmjs.com/package/@faker-js/faker) [![](https://img.shields.io/github/stars/faker-js/faker?logo=github)](https://github.com/faker-js/faker) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://fakerjs.dev)
+  - e2e 测试
+    - **`@playwright/test`** [![](https://img.shields.io/npm/v/@playwright/test?logo=npm)](https://www.npmjs.com/package/@playwright/test) [![](https://img.shields.io/github/stars/Microsoft/playwright?logo=github)](https://github.com/Microsoft/playwright) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://playwright.dev/)
+  - unit 测试
+    - **`vitest`** [![](https://img.shields.io/npm/v/vitest?logo=npm)](https://www.npmjs.com/package/vitest) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev)
+    - **`@vue/test-utils`** [![](https://img.shields.io/npm/v/@vue/test-utils?logo=npm)](https://www.npmjs.com/package/@vue/test-utils) [![](https://img.shields.io/github/stars/vuejs/test-utils?logo=github)](https://github.com/vuejs/test-utils) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://test-utils.vuejs.org/)
+    - **`@pinia/testing`** [![](https://img.shields.io/npm/v/@pinia/testing?logo=npm)](https://www.npmjs.com/package/@pinia/testing) [![](https://img.shields.io/github/stars/vuejs/pinia?logo=github)](https://github.com/vuejs/pinia) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://pinia.vuejs.org/cookbook/testing.html#testing-stores)
+    - **`@vitest/coverage-c8`** [![](https://img.shields.io/npm/v/@vitest/coverage-c8?logo=npm)](https://www.npmjs.com/package/@vitest/coverage-c8) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/coverage.html#coverage)
+    - **`@vitest/ui`** [![](https://img.shields.io/npm/v/@vitest/ui?logo=npm)](https://www.npmjs.com/package/@vitest/ui) [![](https://img.shields.io/github/stars/vitest-dev/vitest?logo=github)](https://github.com/vitest-dev/vitest) [![](https://img.shields.io/static/v1?label=official-site&message=>)](https://vitest.dev/guide/ui.html)
+    - **`jsdom`** [![](https://img.shields.io/npm/v/jsdom?logo=npm)](https://www.npmjs.com/package/jsdom) [![](https://img.shields.io/github/stars/jsdom/jsdom?logo=github)](https://github.com/jsdom/jsdom)
+    - **`@types/jsdom`** [![](https://img.shields.io/npm/v/@types/jsdom?logo=npm)](https://www.npmjs.com/package/@types/jsdom) [![](https://img.shields.io/github/stars/DefinitelyTyped/DefinitelyTyped?logo=github)](https://github.com/DefinitelyTyped/DefinitelyTyped)
+  - 打包分析
+    - **`rollup-plugin-visualizer`** [![](https://img.shields.io/npm/v/rollup-plugin-visualizer?logo=npm)](https://www.npmjs.com/package/rollup-plugin-visualizer) [![](https://img.shields.io/github/stars/btd/rollup-plugin-visualizer?logo=github)](https://github.com/btd/rollup-plugin-visualizer)

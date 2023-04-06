@@ -1,10 +1,5 @@
 {
-  "include": [
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.ts",
-    "**/*.vue",
-  ],
+  "include": ["**/*.js", "**/*.cjs", "**/*.ts", "**/*.vue"],
   "exclude": ["node_modules", "public", "dist", "public/reports"],
   "compilerOptions": {
     "composite": true,
@@ -12,12 +7,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": [
-      "node",
-      "vite/client",
-      "jsdom",
-      "vitest/globals",
-    ],
+    "types": ["node", "vite/client", "jsdom", "vitest/globals"],
     "target": "ES2015",
     "useDefineForClassFields": true,
     "module": "ESNext",

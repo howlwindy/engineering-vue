@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { C_LOCALE } from '@/consts'
+import { useGlobalStore } from '@/store'
 import { E_LOCALE } from '@/types'
 import { uFaker, uLocaleLocalStorage } from '@/utils'
 import { faker } from '@faker-js/faker'
@@ -7,8 +8,6 @@ import { Icon } from '@iconify/vue'
 import { QBtn, QItem, QItemSection, QList, QMenu } from 'quasar'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-
-import { useGlobalStore } from '@/store/global.store'
 
 const globalStore = useGlobalStore()
 const { locale } = useI18n()

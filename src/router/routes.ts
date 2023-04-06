@@ -1,3 +1,3 @@
 export default [
-  { path: '/', component: () => import('@/pages/home/HomePage.vue') }
+  { path: '/', component: () => import('@/pages/home/HomePage.vue') },
 ]

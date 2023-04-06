@@ -1,6 +1,7 @@
-import { mount } from '@vue/test-utils'
-import I18nModel from '@/models/i18n/I18nModel.vue'
 import i18n from '@/locale'
+import { mount } from '@vue/test-utils'
+
+import I18nModel from '@/models/i18n/I18nModel.vue'
 
 describe('I18nModel', () => {
   const wrapper = mount(I18nModel)

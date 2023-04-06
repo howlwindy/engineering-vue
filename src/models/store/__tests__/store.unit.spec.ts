@@ -1,11 +1,12 @@
-import { mount } from '@vue/test-utils'
-import StoreModel from '@/models/store/StoreModel.vue'
+import { useGlobalStore } from '@/store'
 import { createTestingPinia } from '@pinia/testing'
-import { useGlobalStore } from '@/store/global.store'
+import { mount } from '@vue/test-utils'
+
+import StoreModel from '@/models/store/StoreModel.vue'
 
 describe('StoreModel', () => {
   const wrapper = mount(StoreModel, {
-    plugins: [createTestingPinia()]
+    plugins: [createTestingPinia()],
   })
   const count = wrapper.get('button')
   const pow = wrapper.get('[data-unit-test=pow]')

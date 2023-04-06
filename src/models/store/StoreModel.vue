@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import {
-  QBtn,
-  QCard,
-  QCardActions,
-  QCardSection,
-} from 'quasar'
+import { QBtn, QCard, QCardActions, QCardSection } from 'quasar'
 
-import { useGlobalStore } from '@/store/global.store'
+import { useGlobalStore } from '@/store'
 
 const globalStore = useGlobalStore()
 </script>

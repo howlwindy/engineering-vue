@@ -1,12 +1,13 @@
-import { mount } from '@vue/test-utils'
 import HomePage from '@/pages/home/HomePage.vue'
-import StoreModel from '@/models/store/StoreModel.vue'
+import { mount } from '@vue/test-utils'
+
 import I18nModel from '@/models/i18n/I18nModel.vue'
+import StoreModel from '@/models/store/StoreModel.vue'
 
 describe('HomePage', () => {
   it('render', () => {
     const wrapper = mount(HomePage, {
-      shallow: true
+      shallow: true,
     })
     expect(wrapper.findComponent(StoreModel).exists()).toBe(true)
     expect(wrapper.findComponent(I18nModel).exists()).toBe(true)
