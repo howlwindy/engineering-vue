@@ -131,7 +131,7 @@ pnpm create vite
 - [playwright.config.ts](playwright.config.ts) - playwright 配置
 - [postcss.config.js](postcss.config.js) - 配置 tailwind 和其他 css 语法
 - [README.md](README.md) - 项目说明
-- [tailwind.config.cjs](tailwind.config.cjs) - tailwindcss 配置
+- [tailwind.config.ts](tailwind.config.ts) - tailwindcss 配置
 - [tsconfig.json](tsconfig.json) - 当前项目 ts 的表现
 - [vite.config.ts](vite.config.ts) - vite 配置
 - [vitest.config.ts](vitest.config.ts) - vitest 配置

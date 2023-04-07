@@ -8,7 +8,7 @@ import stylelint from 'stylelint'
 import tailwindcss from 'tailwindcss'
 import tailwindcssNesting from 'tailwindcss/nesting'
 
-import tailwindConfig from './tailwind.config.cjs'
+import tailwindConfig from './tailwind.config'
 
 export default {
   plugins: [
