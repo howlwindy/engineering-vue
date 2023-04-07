@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type {Config} from 'tailwindcss'
+
+export default {
   content: ['./index.html', './src/**/*.{css,vue,ts,tsx}'],
   darkMode: 'class',
   theme: {
@@ -9,4 +10,4 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
   ],
-}
+} satisfies Config
