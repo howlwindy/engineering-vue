@@ -2,14 +2,6 @@
 import { FakerModel, I18nModel, ThemeModel } from '@/models'
 import { useGlobalStore } from '@/store'
 import { Icon } from '@iconify/vue'
-import {
-  QBtn,
-  QHeader,
-  QLayout,
-  QPage,
-  QPageContainer,
-  QScrollArea,
-} from 'quasar'
 import { ref } from 'vue'
 
 const globalStore = useGlobalStore()

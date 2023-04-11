@@ -4,7 +4,6 @@ import { E_THEME } from '@/types'
 import { uThemeLocalStorage } from '@/utils'
 import { Icon } from '@iconify/vue'
 import { usePreferredDark } from '@vueuse/core'
-import { QBtn, QItem, QItemSection, QList, QMenu } from 'quasar'
 import { onMounted, ref, watch } from 'vue'
 
 const isDark = usePreferredDark()
@@ -35,13 +34,7 @@ onMounted(() => {
     <span class="ml-2">{{ $t(`global.locale.theme.${data}`) }}</span>
     <QMenu>
       <QList>
-        <QItem
-          v-for="v of Object.values(E_THEME)"
-          :key="v"
-          dense
-          clickable
-          @click="change(v as E_THEME)"
-        >
+        <QItem v-for="v of Object.values(E_THEME)" :key="v" dense clickable @click="change(v as E_THEME)">
           <QItemSection>
             <Icon :icon="C_THEME[v].icon" width="25" height="25" />
           </QItemSection>

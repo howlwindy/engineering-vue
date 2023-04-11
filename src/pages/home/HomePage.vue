@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { QBtn, QCard, QCardActions } from 'quasar'
-
 import StoreModel from '@/models/store/StoreModel.vue'
 </script>
 <template>
@@ -10,9 +8,7 @@ import StoreModel from '@/models/store/StoreModel.vue'
     </h1>
     <QCard flat>
       <QCardActions>
-        <QBtn flat target="_blank" href="/reports/unit/index.html"
-          >unit报告</QBtn
-        >
+        <QBtn flat target="_blank" href="/reports/unit/index.html">unit报告</QBtn>
         <QBtn flat target="_blank" href="/reports/e2e/index.html">e2e报告</QBtn>
       </QCardActions>
     </QCard>

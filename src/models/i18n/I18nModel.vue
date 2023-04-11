@@ -5,7 +5,6 @@ import { E_LOCALE } from '@/types'
 import { uFaker, uLocaleLocalStorage } from '@/utils'
 import { faker } from '@faker-js/faker'
 import { Icon } from '@iconify/vue'
-import { QBtn, QItem, QItemSection, QList, QMenu } from 'quasar'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -29,14 +28,7 @@ const change = (val: E_LOCALE) => {
     <span class="ml-2">{{ C_LOCALE[data].label }}</span>
     <QMenu>
       <QList>
-        <QItem
-          v-for="(v, k) of C_LOCALE"
-          :key="k"
-          v-close-popup
-          dense
-          clickable
-          @click="change(k)"
-        >
+        <QItem v-for="(v, k) of C_LOCALE" :key="k" v-close-popup dense clickable @click="change(k)">
           <QItemSection>
             <Icon :icon="v.flag" width="25" height="25" />
           </QItemSection>
